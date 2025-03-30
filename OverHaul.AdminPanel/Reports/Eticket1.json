@@ -1,0 +1,25 @@
+[
+  {
+    "ConsertName": "کنسرت سهراب پاکزاد",
+    "BuyerName": "احد حسینی مقدم",
+    "Phone": "09149140544",
+    "InvoiceNumber": "60000001",
+    "TicketNumber": "TCK300001",
+    "TicketCount": 2,
+    "TicketPrice": 300000,
+    "TotalPrice": 600000,
+    "TotalPriceTax": 660000,
+    "Discount": 0,
+    "HallTitle": "سالن پتروشیمی تبریز",
+    "Date": "1403/08/30",
+    "DayName": "سه شنبه",
+    "Time": "18:00",
+    "HallTypeTitle": "بالکن",
+    "Col": 5,
+    "Row": 13,
+    "Address": "تبریز - 29 بهمن - آمفی تئاتر پتروشیمی تبریز",
+    "ArtistPicPath": "D:\\GitProject\\ETicket\\ETicket\\ETicket.Presentation\\wwwroot\\images\\Artists\\1.jpg"
+
+  }
+
+]

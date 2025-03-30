@@ -1,0 +1,115 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<MvcRazorCompileOnPublish>false</MvcRazorCompileOnPublish>
+		<Platforms>AnyCPU;x86</Platforms>
+	</PropertyGroup>
+	<PropertyGroup>
+		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+	  <Content Remove="appsettings*.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Base\BaseController.cs" />
+	  <Compile Remove="Common\GetAttribute.cs" />
+	  <Compile Remove="Common\ICookieService.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="appsettings.Development.json" />
+	  <Content Include="appsettings.json" />
+	  <Content Include="appsettings.Production.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DataTables.AspNet.AspNetCore" Version="2.0.2" />
+		<PackageReference Include="jQuery" Version="3.6.0" />
+		<PackageReference Include="jquery.validate.unobtrusive.bootstrap" Version="1.2.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.8" />
+		<PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.8" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.3" />
+		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="9.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.jQuery.Unobtrusive.Ajax" Version="3.2.6" />
+		<PackageReference Include="Microsoft.jQuery.Unobtrusive.Validation" Version="3.2.12" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+		<PackageReference Include="Serilog.Sinks.Datadog.Logs" Version="0.5.2" />
+		<PackageReference Include="Stimulsoft.Reports.Web.NetCore" Version="2024.3.2" />
+		
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Overhaul.Application\Overhaul.Application.csproj" />
+	  <ProjectReference Include="..\Overhaul.Infrastructue\Overhaul.Infrastructure.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Areas\Admin\Controllers\" />
+	  <Folder Include="Base\" />
+	  <Folder Include="Logs\" />
+	  <Folder Include="ViewComponents\" />
+	  <Folder Include="wwwroot\assets\fontsgoogleapis\" />
+	  <Folder Include="wwwroot\images\Icon\" />
+	  <Folder Include="wwwroot\lib\ag-grid\components\" />
+	  <Folder Include="wwwroot\lib\datatablesNet\css\" />
+	  <Folder Include="wwwroot\lib\datatablesNet\js\" />
+	  <Folder Include="wwwroot\lib\jquery\" />
+	  <Folder Include="wwwroot\lib\stimul\localization\" />
+	  <Folder Include="wwwroot\TempFile\PDF\" />
+	  <Folder Include="wwwroot\TempFile\XLS\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Include="wwwroot\src\css\Login.css" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Update="Reports\InvoiceA5Data1.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Update="Reports\InvoiceFoodListDailyData1.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Update="Reports\InvoiceListDailyData1.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Update="Reports\InvoiceListDailyDataCashFooter1.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Update="Reports\InvoiceListDailyDataFooter1.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Update="Reports\InvoiceThermalData1.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="Reports\InvoiceA5.mrt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Reports\InvoiceFoodListDaily.mrt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Reports\InvoiceListDaily.mrt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Reports\InvoiceThermal.mrt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Reports\RestaurantOrderPrintWithoutPrice.mrt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+</Project>

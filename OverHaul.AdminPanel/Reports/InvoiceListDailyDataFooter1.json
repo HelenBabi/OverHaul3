@@ -1,0 +1,35 @@
+[
+  {
+    "saleTypeName": "پرسنل",
+    "quota": 4,
+    "customerShare": 2864617600,
+    "employerShare": 8112012700,
+    "guestShare": 5512072700,
+    "discount": 589472,
+    "customerShareTaxPrice": 286461760,
+    "employerShareTaxPrice": 811201270,
+    "guestShareTaxPrice": 551207270
+  },
+  {
+    "saleTypeName": "هتل",
+    "quota": 4,
+    "customerShare": 28646176,
+    "employerShare": 95120727,
+    "guestShare": 3457247,
+    "discount": 0,
+    "employerShareTaxPrice": 2864617,
+    "guestShareTaxPrice": 9512072,
+    "customerShareTaxPrice": 3457247
+  },
+  {
+    "saleTypeName": "آزاد",
+    "quota": 4,
+    "customerShare": 28646176,
+    "employerShare": 95120727,
+    "guestShare": 3457247,
+    "discount": 0,
+    "employerShareTaxPrice": 2864617,
+    "guestShareTaxPrice": 9512072,
+    "customerShareTaxPrice": 3457247
+  }
+]

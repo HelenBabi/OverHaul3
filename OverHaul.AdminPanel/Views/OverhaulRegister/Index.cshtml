@@ -1,0 +1,182 @@
+﻿@model Overhaul.Application.Models.RegisterOverhaulModel;
+
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+<link href="~/lib/select2/select2.min.css" rel="stylesheet" />
+<script src="~/lib/select2/select2.min.js"></script>
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="box">
+            <div class="box-header">
+                <h4 class="box-title">خرید</h4>
+            </div>
+            <div class="box-body">
+
+
+
+                <form class="form" action="save" method="post" data-ajax="true" data-ajax-method="post" data-ajax-complete="SaveComplete">
+
+            <div class="box-body">
+                <h4 class="box-title text-info mb-0"><i class="ti-user me-15"></i>ثبت نام اورهال</h4>
+                <hr class="my-15">
+                <div class="row">
+                            <custom-input asp-for="@Model.FirstName" bottstarp-col-number="6"></custom-input>
+                            <custom-input asp-for="@Model.LastName" bottstarp-col-number="6"></custom-input>
+                            <custom-input asp-for="@Model.FatherName" bottstarp-col-number="6"></custom-input>
+                            <custom-input asp-for="@Model.Nationality" bottstarp-col-number="6"></custom-input>
+                            <custom-input asp-for="@Model.shSh" bottstarp-col-number="6"></custom-input>
+                            <custom-input asp-for="@Model.BirthDay" periasn-date="true"></custom-input>
+
+                </div>
+
+              
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">شماره کارت بانک تجارت</label>
+                            <input asp-for="BankCardNo" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">شماره حساب بانک تجارت</label>
+                            <input asp-for="IBAN" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">شماره بیمه</label>
+                            <input asp-for="SSN" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">شماره موبایل</label>
+                            <input asp-for="@Model.Mobile" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">شماره تلفن ثابت</label>
+                            <input asp-for="Tell" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">کد پستی</label>
+                            <input asp-for="PostalCode" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">آدرس</label>
+                            <input asp-for="Address" type="text" class="form-control">
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">وضعیت نظام وظیفه</label>
+                                                       <select asp-for="MilitaryCardTypeId" asp-items= "@Model.SelectListMilitaryCardType" class="form-control">
+                                <option value="">یک گزینه انتخاب کنید</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">وضعیت تاهل</label>
+                            <select asp-for="MaritalStatusTypeId" asp-items="@Model.SelectListMaritalStatusType" class="form-control">
+                                <option value="">یک گزینه انتخاب کنید</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">وضعیت ایثارگری</label>
+                            <select asp-for="IsargariTypeId" asp-items="@Model.SelectListIsargariType" class="form-control">
+                                <option value="">یک گزینه انتخاب کنید</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">آخرین مدرک تحصلی</label>
+                            <input asp-for="@Model.Degree" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">رشته تحصیلی</label>
+                            <input asp-for="@Model.Major" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">آیا در اورهال گذشته شرکت کرده اید؟</label>
+                            <input checked asp-for="State" type="checkbox" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer text-end">
+                <button type="button" class="btn btn-warning me-1">
+                    <i class="ti-trash"></i> لغو
+                </button>
+                <button type="submit" class="btn btn-primary">
+                    <i class="ti-save-alt"></i> ذخیره
+                </button>
+            </div>
+        </form>
+    
+    
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+<script>
+       
+
+            function SaveComplete(data) {
+
+            if (data.responseJSON.isSuccess !== true) {
+                    Swal.fire(
+                        {
+                            text: data.responseJSON.message,
+                            title: "خطا",
+                            icon: 'error',
+                            confirmButtonColor: '#5156be'
+                        }
+                    )
+                }
+                if (data.responseJSON.isSuccess === true) {
+                    Swal.fire(
+                        {
+                            text: data.responseJSON.message,
+                            title: "توجه",
+                            icon: 'success',
+                            confirmButtonColor: '#5156be'
+                        }
+                    )
+                }
+            }
+</script>
+}

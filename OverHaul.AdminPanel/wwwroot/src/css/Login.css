@@ -1,0 +1,33 @@
+﻿@font-face {
+    font-family: 'vazir';
+    src: url('../../fonts/vazir-black-fd.eot') format('embedded-opentype'), url('../../fonts/vazir-black-fd.ttf') format('truetype'), url('../../fonts/vazir-black-fd.woff') format('woff'), url('../../fonts/vazir-black-fd.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'vazirl';
+    src: url('../../fonts/vazir-light-fd.eot') format('embedded-opentype'), url('../../fonts/vazir-light-fd.ttf') format('truetype'), url('../../fonts/vazir-light-fd.woff') format('woff'), url('../../fonts/vazir-light-fd.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'vazirm';
+    src: url('../../fonts/vazir-medium-fd.eot') format('embedded-opentype'), url('../../fonts/vazir-medium-fd.ttf') format('truetype'), url('../../fonts/vazir-medium-fd.woff') format('woff'), url('../../fonts/vazir-medium-fd.woff2') format('woff2');
+}
+html, body {
+    font-family:'vazirm';
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.vh-100 {
+    min-height: 100vh; /* Ensures full height */
+}
+
+.h-custom {
+    height: calc(100% - 60px); /* Subtract footer height if needed */
+}
+
+.bg-primary {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

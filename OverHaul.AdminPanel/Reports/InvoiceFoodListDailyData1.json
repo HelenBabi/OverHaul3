@@ -1,0 +1,98 @@
+[
+  {
+    "foodId": 32085,
+    "restaurantName": "رستوران",
+    "foodTitle": "چلوبرگ   140",
+    "foodCode": "102",
+    "fee": 6644134,
+    "taxPercent": 10,
+    "foodCount": 5,
+    "total": 33220670,
+    "discount": 0,
+    "saleGatewayTitle": "کیوسک بیرون بر"
+  },
+  {
+    "foodId": 31802,
+    "restaurantName": "رستوران",
+    "foodTitle": "چلو ماهی",
+    "foodCode": "12",
+    "fee": 6224248,
+    "taxPercent": 10,
+    "foodCount": 1,
+    "total": 6224248,
+    "discount": 0,
+    "saleGatewayTitle": "کیوسک بیرون بر"
+  },
+  {
+    "foodId": 31798,
+    "restaurantName": "رستوران",
+    "foodTitle": "جوجه کباب با برنج 200",
+    "foodCode": "2",
+    "fee": 4975341,
+    "taxPercent": 10,
+    "foodCount": 3,
+    "total": 14926023,
+    "discount": 0,
+    "saleGatewayTitle": "کیوسک بیرون بر"
+  },
+  {
+    "foodId": 31814,
+    "restaurantName": "رستوران",
+    "foodTitle": "خوراک ماهیچه مرغ",
+    "foodCode": "26",
+    "fee": 5328930,
+    "taxPercent": 10,
+    "foodCount": 1,
+    "total": 5328930,
+    "discount": 0,
+    "saleGatewayTitle": "کیوسک بیرون بر"
+  },
+  {
+    "foodId": 31800,
+    "restaurantName": "رستوران",
+    "foodTitle": "پیتزا مخصوص",
+    "foodCode": "4",
+    "fee": 5097044,
+    "taxPercent": 10,
+    "foodCount": 9,
+    "total": 45873396,
+    "discount": 0,
+    "saleGatewayTitle": "کیوسک بیرون بر"
+  },
+  {
+    "foodId": 31845,
+    "restaurantName": "رستوران",
+    "foodTitle": "چلو کباب کوبیده180",
+    "foodCode": "80",
+    "fee": 5456028,
+    "taxPercent": 10,
+    "foodCount": 7,
+    "total": 38192196,
+    "discount": 0,
+    "saleGatewayTitle": "کیوسک بیرون بر"
+  },
+  {
+    "foodId": 31846,
+    "restaurantName": "رستوران",
+    "foodTitle": "چلو کباب سلطانی",
+    "foodCode": "81",
+    "fee": 6653515,
+    "taxPercent": 10,
+    "foodCount": 4,
+    "total": 26614060,
+    "discount": 0,
+    "saleGatewayTitle": "کیوسک بیرون بر"
+  },
+  {
+    "foodId": 30813,
+    "restaurantName": "رستوران",
+    "foodTitle": "سوپ جو",
+    "foodCode": "9",
+    "fee": 420000,
+    "taxPercent": 10,
+    "foodCount": 15,
+    "total": 6300000,
+    "discount": 0,
+    "saleGatewayTitle": "کیوسک بیرون بر"
+  }
+]

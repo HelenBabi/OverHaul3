@@ -1,0 +1,24 @@
+﻿@using Stimulsoft.Report.Mvc
+
+    @Html.StiNetCoreViewer(new StiNetCoreViewerOptions()
+    {
+        Actions =
+            {
+                   GetReport="GetReport",
+                   ViewerEvent="ViewerEvent"
+            },
+    Appearance =
+            {
+                    RightToLeft=true,
+                    ShowDialogsHelp=false,
+
+},
+    Localization = "lib/stimul/Localization/fa.xml",
+    Toolbar =
+            {
+                FontFamily="Tahoma",
+                ShowOpenButton=false,
+                Alignment= Stimulsoft.Report.Web.StiContentAlignment.Center
+            }
+
+    })

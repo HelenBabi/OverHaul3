@@ -1,0 +1,45 @@
+﻿
+.ButtonExportExcel {
+    padding: 2px 2px 2px 2px !important;
+    background-image: url('/images//Icon/iconExcel.png') !important;
+    background-repeat: no-repeat !important;
+    height: 40PX !important;
+    width: 40PX !important;
+    text-align: center !important;
+    background-position: center !important;
+    background-size: 35PX !important;
+    background-color: transparent !important;
+}
+.ButtonExportword {
+    padding: 2px 2px 2px 2px !important;
+    background-image: url('/images//Icon/iconWord.png') !important;
+    background-repeat: no-repeat !important;
+    height: 40PX !important;
+    width: 40PX !important;
+    text-align: center !important;
+    background-position: center !important;
+    background-size: 35PX !important;
+    background-color: transparent !important;
+}
+.ButtonExportRtf {
+    padding: 2px 2px 2px 2px !important;
+    background-image: url('/images//Icon/iconRtf.png') !important;
+    background-repeat: no-repeat !important;
+    height: 40PX !important;
+    width: 40PX !important;
+    text-align: center !important;
+    background-position: center !important;
+    background-size: 35PX !important;
+    background-color: transparent !important;
+}
+.ButtonExportPdf {
+    padding: 2px 2px 2px 2px !important;
+    background-image: url('/images//Icon/iconPdf.png') !important;
+    background-repeat: no-repeat !important;
+    height: 40PX !important;
+    width: 40PX !important;
+    text-align: center !important;
+    background-position: center !important;
+    background-size: 35PX !important;
+    background-color: transparent !important;
+}
