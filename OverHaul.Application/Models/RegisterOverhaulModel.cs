@@ -39,7 +39,7 @@ public class RegisterOverhaulModel
     public string IBAN { get; set; }
 
     [Display(Name = "شماره بیمه ")]
-    public string SSN { get; set; }
+    public string? SSN { get; set; }
 
     [Required(ErrorMessage = "این فیلد الزامی میباشد")]
     [Display(Name = " موبایل ")]
@@ -47,7 +47,7 @@ public class RegisterOverhaulModel
     public string Mobile { get; set; }
 
     [Required(ErrorMessage = "این فیلد الزامی میباشد")]
-    [Display(Name = " تلفن ثابت ")]
+    [Display(Name = "  تلفن ثابت ")]
     public string Tell { get; set; }
 
     [Required(ErrorMessage = "این فیلد الزامی میباشد")]

@@ -6,11 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Overhaul.Domain.Common;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Overhaul.Domain.Entities;
 
 public class RegisterOverhaul : Entity
 {
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     public new int Id { get; set; }
     public string FirstName { get; set; }
    

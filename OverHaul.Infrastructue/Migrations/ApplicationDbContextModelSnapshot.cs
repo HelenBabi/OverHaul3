@@ -428,10 +428,7 @@ namespace OverHaul.Infrastructure.Migrations
             modelBuilder.Entity("Overhaul.Domain.Entities.RegisterOverhaul", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
                         .IsRequired()

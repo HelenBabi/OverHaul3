@@ -12,8 +12,8 @@ using Overhaul.Infrastructuer.Data;
 namespace OverHaul.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250327161126_Init")]
-    partial class Init
+    [Migration("20250403164202_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -431,10 +431,7 @@ namespace OverHaul.Infrastructure.Migrations
             modelBuilder.Entity("Overhaul.Domain.Entities.RegisterOverhaul", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
                         .IsRequired()
