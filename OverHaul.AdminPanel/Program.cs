@@ -132,6 +132,6 @@ app.MapControllerRoute(
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=OverhaulRegister}/{action=Index}/{id?}");
 
 app.Run();

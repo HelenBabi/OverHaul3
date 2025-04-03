@@ -1,0 +1,37 @@
+﻿@{
+    Layout = "_LayoutRegister";
+}
+
+<!-- استایل اختصاصی در صورت نیاز -->
+<style>
+    .tracking-card {
+        max-width: 500px;
+        margin: 50px auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        .tracking-card .card-header {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+    .tracking-code {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #007bff;
+    }
+</style>
+
+<div class="container">
+    <div class="card tracking-card border-primary">
+        <div class="card-header bg-primary text-white text-center">
+            <h4 class="mb-0">پیگیری ثبت نام</h4>
+        </div>
+        <div class="card-body text-center">
+            <p class="card-text">کد پیگیری شما:</p>
+            <p class="tracking-code">@TempData["RegisterId"]</p>
+            <p class="card-text">لطفاً این کد را برای پیگیری ثبت نام خود نگه دارید.</p>
+        </div>
+    </div>
+</div>
