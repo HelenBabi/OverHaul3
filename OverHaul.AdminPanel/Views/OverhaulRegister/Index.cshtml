@@ -1,10 +1,9 @@
 ﻿@model Overhaul.Application.Models.RegisterOverhaulModel;
 
-<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
 
 <link href="~/lib/select2/select2.min.css" rel="stylesheet" />
-<script src="~/lib/select2/select2.min.js"></script>
+<link href="~/assets/vendor_plugins/dropzone-5.7.0/dist/dropzone.css" rel="stylesheet" />
 
 
 <div class="row">
@@ -19,164 +18,236 @@
 
                 <form class="form" action="save" method="post" data-ajax="true" data-ajax-method="post" data-ajax-complete="SaveComplete">
 
-            <div class="box-body">
-                <h4 class="box-title text-info mb-0"><i class="ti-user me-15"></i>ثبت نام اورهال</h4>
-                <hr class="my-15">
-                <div class="row">
-                            <custom-input asp-for="@Model.FirstName" bottstarp-col-number="6"></custom-input>
-                            <custom-input asp-for="@Model.LastName" bottstarp-col-number="6"></custom-input>
-                            <custom-input asp-for="@Model.FatherName" bottstarp-col-number="6"></custom-input>
-                            <custom-input asp-for="@Model.Nationality" bottstarp-col-number="6"></custom-input>
-                            <custom-input asp-for="@Model.shSh" bottstarp-col-number="6"></custom-input>
-                            <custom-input asp-for="@Model.BirthDay" periasn-date="true"></custom-input>
+                    <div class="box-body">
+                        <h4 class="box-title text-info mb-0"><i class="ti-user me-15"></i>ثبت نام اورهال</h4>
+                        <hr class="my-15">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">نام</label>
+                                    <input asp-for="FirstName" type="text" class="form-control">
+                                    <span asp-validation-for="FirstName" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">نام خانوادگی</label>
+                                    <input asp-for="LastName" type="text" class="form-control">
+                                    <span asp-validation-for="LastName" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">نام پدر</label>
+                                    <input asp-for="FatherName" type="text" class="form-control">
+                                    <span asp-validation-for="FatherName" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">کد ملی</label>
+                                    <input asp-for="Nationality" type="text" class="form-control">
+                                    <span asp-validation-for="Nationality" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">شماره شناسنامه</label>
+                                    <input asp-for="shSh" type="text" class="form-control">
+                                    <span asp-validation-for="shSh" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">تاریخ تولد</label>
+                                    <input asp-for="BirthDay" type="text" class="form-control">
+                                    <span asp-validation-for="BirthDay" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                           
+                           
+                            
+                          
 
-                </div>
+                        </div>
 
-              
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <label class="form-label">شماره کارت بانک تجارت</label>
-                            <input asp-for="BankCardNo" type="text" class="form-control">
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">شماره کارت بانک تجارت</label>
+                                    <input asp-for="BankCardNo" type="text" class="form-control">
+                                    <span asp-validation-for="BankCardNo" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">شماره حساب بانک تجارت</label>
+                                    <input asp-for="IBAN" type="text" class="form-control">
+                                    <span asp-validation-for="IBAN" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">شماره بیمه</label>
+                                    <input asp-for="SSN" type="text" class="form-control">
+                                    <span asp-validation-for="SSN" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">شماره موبایل</label>
+                                    <input asp-for="Mobile" type="text" class="form-control">
+                                    <span asp-validation-for="Mobile" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">شماره تلفن ثابت</label>
+                                    <input asp-for="Tell" type="text" class="form-control">
+                                    <span asp-validation-for="Tell" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">کد پستی</label>
+                                    <input asp-for="PostalCode" type="text" class="form-control">
+                                    <span asp-validation-for="PostalCode" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">آدرس</label>
+                                    <input asp-for="Address" type="text" class="form-control">
+                                    <span asp-validation-for="Address" />
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">وضعیت نظام وظیفه</label>
+                                    <select asp-for="MilitaryCardTypeId" asp-items="@Model.SelectListMilitaryCardType" class="form-control">
+                                        <option value="">یک گزینه انتخاب کنید</option>
+                                    </select>
+                                    <span asp-validation-for="MilitaryCardTypeId" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">وضعیت تاهل</label>
+                                    <select asp-for="MaritalStatusTypeId" asp-items="@Model.SelectListMaritalStatusType" class="form-control">
+                                        <option value="">یک گزینه انتخاب کنید</option>
+                                    </select>
+                                    <span asp-validation-for="MaritalStatusTypeId" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">وضعیت ایثارگری</label>
+                                    <select asp-for="IsargariTypeId" asp-items="@Model.SelectListIsargariType" class="form-control">
+                                        <option value="">یک گزینه انتخاب کنید</option>
+                                    </select>
+                                    <span asp-validation-for="IsargariTypeId" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">آخرین مدرک تحصلی</label>
+                                    <input asp-for="Degree" type="text" class="form-control">
+                                    <span asp-validation-for="Degree" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">رشته تحصیلی</label>
+                                    <input asp-for="Major" type="text" class="form-control">
+                                    <span asp-validation-for="Major" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label class="form-label">آیا در اورهال سالهای گذشته شرکت کرده اید؟</label>
+                                    <input checked asp-for="State" type="checkbox" >
+                                    <span asp-validation-for="State" />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <label class="form-label">شماره حساب بانک تجارت</label>
-                            <input asp-for="IBAN" type="text" class="form-control">
+                    <div class="jumbotron">
+                        <div class="dropzone" id="dropzoneForm" style="background: none; border: none;">
+                            <div class="fallback">
+                                <input name="file" type="file" multiple accept="image/*" />
+                                <input type="submit" value="Upload" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <label class="form-label">شماره بیمه</label>
-                            <input asp-for="SSN" type="text" class="form-control">
-                        </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer text-end">
+                        <button type="button" class="btn btn-warning me-1">
+                            <i class="ti-trash"></i> لغو
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="ti-save-alt"></i> ذخیره
+                        </button>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <label class="form-label">شماره موبایل</label>
-                            <input asp-for="@Model.Mobile" type="text" class="form-control">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <label class="form-label">شماره تلفن ثابت</label>
-                            <input asp-for="Tell" type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <label class="form-label">کد پستی</label>
-                            <input asp-for="PostalCode" type="text" class="form-control">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="form-group">
-                            <label class="form-label">آدرس</label>
-                            <input asp-for="Address" type="text" class="form-control">
-                        </div>
-                    </div>
-                  
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <label class="form-label">وضعیت نظام وظیفه</label>
-                                                       <select asp-for="MilitaryCardTypeId" asp-items= "@Model.SelectListMilitaryCardType" class="form-control">
-                                <option value="">یک گزینه انتخاب کنید</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <label class="form-label">وضعیت تاهل</label>
-                            <select asp-for="MaritalStatusTypeId" asp-items="@Model.SelectListMaritalStatusType" class="form-control">
-                                <option value="">یک گزینه انتخاب کنید</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <label class="form-label">وضعیت ایثارگری</label>
-                            <select asp-for="IsargariTypeId" asp-items="@Model.SelectListIsargariType" class="form-control">
-                                <option value="">یک گزینه انتخاب کنید</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <label class="form-label">آخرین مدرک تحصلی</label>
-                            <input asp-for="@Model.Degree" type="text" class="form-control">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <label class="form-label">رشته تحصیلی</label>
-                            <input asp-for="@Model.Major" type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <label class="form-label">آیا در اورهال گذشته شرکت کرده اید؟</label>
-                            <input checked asp-for="State" type="checkbox" class="form-control">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer text-end">
-                <button type="button" class="btn btn-warning me-1">
-                    <i class="ti-trash"></i> لغو
-                </button>
-                <button type="submit" class="btn btn-primary">
-                    <i class="ti-save-alt"></i> ذخیره
-                </button>
-            </div>
-        </form>
-    
-    
+                </form>
+
+
             </div>
         </div>
     </div>
 </div>
 
 @section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/select2/select2.min.js"></script>
+    
+    <script src="~/assets/vendor_plugins/dropzone-5.7.0/dist/dropzone.js"></script>
+    <script>
 
-<script>
-       
 
-            function SaveComplete(data) {
+        function SaveComplete(data) {
 
-            if (data.responseJSON.isSuccess !== true) {
-                    Swal.fire(
-                        {
-                            text: data.responseJSON.message,
-                            title: "خطا",
-                            icon: 'error',
-                            confirmButtonColor: '#5156be'
-                        }
-                    )
-                }
-                if (data.responseJSON.isSuccess === true) {
-                    Swal.fire(
-                        {
-                            text: data.responseJSON.message,
-                            title: "توجه",
-                            icon: 'success',
-                            confirmButtonColor: '#5156be'
-                        }
-                    )
-                }
+        if (data.responseJSON.isSuccess !== true) {
+                Swal.fire(
+                    {
+                        text: data.responseJSON.message,
+                        title: "خطا",
+                        icon: 'error',
+                        confirmButtonColor: '#5156be'
+                    }
+                )
             }
-</script>
+            if (data.responseJSON.isSuccess === true) {
+                Swal.fire(
+                    {
+                        text: data.responseJSON.message,
+                        title: "توجه",
+                        icon: 'success',
+                        confirmButtonColor: '#5156be'
+                    }
+                )
+            }
+        }
+    </script>
 }
