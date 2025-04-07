@@ -30,13 +30,12 @@ public class RegisterOverhaulModel
     [Required(ErrorMessage = "این فیلد الزامی میباشد")]
     [Display(Name = "تاریخ تولد")]
     public string BirthDay { get; set; }
-
-    [Required(ErrorMessage = "این فیلد الزامی میباشد")]
+     
     [Display(Name = "شماره کارت بانکی")]
-    public string BankCardNo { get; set; }
-    [Required(ErrorMessage = "این فیلد الزامی میباشد")]
+    public string? BankCardNo { get; set; }
+ 
     [Display(Name = "شماره حساب بانکی")]
-    public string IBAN { get; set; }
+    public string? IBAN { get; set; }
 
     [Display(Name = "شماره بیمه ")]
     public string? SSN { get; set; }

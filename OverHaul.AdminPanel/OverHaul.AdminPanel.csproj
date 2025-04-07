@@ -62,6 +62,7 @@
 	  <Folder Include="Base\" />
 	  <Folder Include="Logs\" />
 	  <Folder Include="ViewComponents\" />
+	  <Folder Include="Views\Auth\" />
 	  <Folder Include="wwwroot\assets\fontsgoogleapis\" />
 	  <Folder Include="wwwroot\images\Icon\" />
 	  <Folder Include="wwwroot\lib\ag-grid\components\" />

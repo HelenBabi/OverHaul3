@@ -27,11 +27,11 @@ public class RegisterOverhaul : Entity
    
     public DateOnly BirthDay { get; set; }
    
-    public string BankCardNo { get; set; }
+    public string? BankCardNo { get; set; }
    
-    public string IBAN { get; set; }
+    public string? IBAN { get; set; }
 
-    public string SSN { get; set; }
+    public string? SSN { get; set; }
 
    
     public string Mobile { get; set; }

@@ -1,0 +1,72 @@
+﻿@using overhaul.Application.Models.User
+@model AppUserBindingModel;
+@{
+}
+<div class="col-lg-6 col-12">
+    <div class="box">
+        <div class="box-header with-border">
+            <h4 class="box-title">فرم نمونه</h4>
+        </div>
+        <!-- /.box-header -->
+        <form class="form" action="CreateUser" method="post">
+            <div class="box-body">
+                <h4 class="box-title text-info mb-0"><i class="ti-user me-15"></i>درباره کاربر</h4>
+                <hr class="my-15">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+                            <label class="form-label">نام</label>
+                            <input asp-for="FirstName" type="text" class="form-control" placeholder="نام">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">فامیلی</label>
+                            <input asp-for="LastName" type="text" class="form-control" placeholder="فامیلی">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">ایمیل</label>
+                            <input asp-for="Email" type="text" class="form-control" placeholder="ایمیل">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">شماره تماس</label>
+                            <input asp-for="Mobile" type="text" class="form-control" placeholder="Phone">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">رمز عبور</label>
+                            <input asp-for="Password" type="password" class="form-control" placeholder="ایمیل">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">تکرار رمز عبور</label>
+                            <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Phone">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer text-end">
+                <button type="button" class="btn btn-warning me-1">
+                    <i class="ti-trash"></i> لغو
+                </button>
+                <button type="submit" class="btn btn-primary">
+                    <i class="ti-save-alt"></i> ذخیره
+                </button>
+            </div>
+        </form>
+    </div>
+    <!-- /.box -->
+</div>
